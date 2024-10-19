@@ -10,6 +10,7 @@ class TravelMate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const DashboardView();
+    return const MaterialApp(
+        debugShowCheckedModeBanner: false, home: DashboardView());
   }
 }

@@ -163,8 +163,8 @@ class Assets {
   static const String imagesSubmitOffersImage = "assets/images/submit_offers_image.svg";
 
   /// Assets for imagesTravelMateLogo
-  /// assets/images/travelMate_logo.svg
-  static const String imagesTravelMateLogo = "assets/images/travelMate_logo.svg";
+  /// assets/images/travelMate_logo.png
+  static const String imagesTravelMateLogo = "assets/images/travelMate_logo.png";
 
   /// Assets for imagesTripIcon
   /// assets/images/trip_icon.svg

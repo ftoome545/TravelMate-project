@@ -132,6 +132,12 @@ abstract class AppStyles {
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w700,
   );
+  static const TextStyle styleBold16 = TextStyle(
+    color: Color(0xff7AA0A7),
+    fontSize: 16,
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w700,
+  );
   static const TextStyle styleMedium24 = TextStyle(
     color: Color(0xff7AA0A7),
     fontSize: 24,
