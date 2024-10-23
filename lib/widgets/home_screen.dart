@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:travel_mate/widgets/filter_icon.dart';
 import 'package:travel_mate/widgets/home_search_bar.dart';
