@@ -67,8 +67,8 @@ class Assets {
   static const String imagesGuideOrTouristImage = "assets/images/guide_or_tourist_image.svg";
 
   /// Assets for imagesGuideSarahImage
-  /// assets/images/guide_Sarah_image.svg
-  static const String imagesGuideSarahImage = "assets/images/guide_Sarah_image.svg";
+  /// assets/images/guide_Sarah_image.png
+  static const String imagesGuideSarahImage = "assets/images/guide_Sarah_image.png";
 
   /// Assets for imagesHomeIcon
   /// assets/images/home_icon.svg
