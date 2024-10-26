@@ -58,6 +58,10 @@ class Assets {
   /// assets/images/google_icon.svg
   static const String imagesGoogleIcon = "assets/images/google_icon.svg";
 
+  /// Assets for imagesGuideAliImage
+  /// assets/images/guide_Ali_image.png
+  static const String imagesGuideAliImage = "assets/images/guide_Ali_image.png";
+
   /// Assets for imagesGuideImageInConfirmScreen
   /// assets/images/guide_image_in_confirm_screen.svg
   static const String imagesGuideImageInConfirmScreen = "assets/images/guide_image_in_confirm_screen.svg";
