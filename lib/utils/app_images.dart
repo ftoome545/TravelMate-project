@@ -14,6 +14,10 @@ class Assets {
   /// assets/images/back_icon.svg
   static const String imagesBackIcon = "assets/images/back_icon.svg";
 
+  /// Assets for imagesBackIconLightColor
+  /// assets/images/back_icon_lightColor.svg
+  static const String imagesBackIconLightColor = "assets/images/back_icon_lightColor.svg";
+
   /// Assets for imagesBrowseGuidesImage
   /// assets/images/browse_guides_image.svg
   static const String imagesBrowseGuidesImage = "assets/images/browse_guides_image.svg";
@@ -77,6 +81,10 @@ class Assets {
   /// Assets for imagesHomeIcon
   /// assets/images/home_icon.svg
   static const String imagesHomeIcon = "assets/images/home_icon.svg";
+
+  /// Assets for imagesHomeScreenSearchImage
+  /// assets/images/home_screen_search_image.svg
+  static const String imagesHomeScreenSearchImage = "assets/images/home_screen_search_image.svg";
 
   /// Assets for imagesMailIcon
   /// assets/images/mail_icon.svg
@@ -177,6 +185,10 @@ class Assets {
   /// Assets for imagesTripSendIcon
   /// assets/images/trip_send_icon.svg
   static const String imagesTripSendIcon = "assets/images/trip_send_icon.svg";
+
+  /// Assets for imagesWhiteSearchIcon
+  /// assets/images/white_search_icon.svg
+  static const String imagesWhiteSearchIcon = "assets/images/white_search_icon.svg";
 
   /// Assets for imagesXIcon
   /// assets/images/x_icon.svg

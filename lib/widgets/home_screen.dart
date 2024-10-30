@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:travel_mate/utils/app_images.dart';
+import 'package:travel_mate/widgets/custom_search_delegate.dart';
 import 'package:travel_mate/widgets/filter_icon.dart';
 import 'package:travel_mate/widgets/guide_box_list_view.dart';
-import 'package:travel_mate/widgets/home_search_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,19 +12,28 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          bottom: const PreferredSize(
-            preferredSize: Size.fromHeight(50.0),
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(50.0),
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               child: Row(
                 children: [
                   Expanded(
-                    child: HomeSearchBar(),
-                  ),
-                  SizedBox(
+                      flex: 5,
+                      child: GestureDetector(
+                          onTap: () {
+                            showSearch(
+                                context: context,
+                                delegate: CustomSearchDelegate());
+                          },
+                          child: SvgPicture.asset(
+                              Assets.imagesHomeScreenSearchImage))),
+                  const SizedBox(
                     width: 14,
                   ),
-                  FilterIcon(),
+                  const Expanded(
+                    child: FilterIcon(),
+                  )
                 ],
               ),
             ),
