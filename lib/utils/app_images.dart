@@ -3,8 +3,8 @@ class Assets {
   Assets._();
   
   /// Assets for imagesAhmedGuideCircleImage
-  /// assets/images/Ahmed_guide_circle_image.svg
-  static const String imagesAhmedGuideCircleImage = "assets/images/Ahmed_guide_circle_image.svg";
+  /// assets/images/Ahmed_guide_circle_image.png
+  static const String imagesAhmedGuideCircleImage = "assets/images/Ahmed_guide_circle_image.png";
 
   /// Assets for imagesArrowRightIcon
   /// assets/images/arrow_right_icon.svg
@@ -147,8 +147,8 @@ class Assets {
   static const String imagesRatingStarsImage = "assets/images/rating_stars_image.svg";
 
   /// Assets for imagesSarahCircleImage
-  /// assets/images/Sarah_circle_image.svg
-  static const String imagesSarahCircleImage = "assets/images/Sarah_circle_image.svg";
+  /// assets/images/Sarah_circle_image.png
+  static const String imagesSarahCircleImage = "assets/images/Sarah_circle_image.png";
 
   /// Assets for imagesSearchIcon
   /// assets/images/search_icon.svg

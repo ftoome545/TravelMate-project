@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_mate/utils/app_styles.dart';
 
+// ignore: must_be_immutable
 class FilterGuideGender extends StatefulWidget {
   FilterGuideGender({
     super.key,

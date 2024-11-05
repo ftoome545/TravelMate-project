@@ -33,7 +33,9 @@ class _NavigationScreenState extends State<NavigationScreen> {
           },
           children: const [
             HomeScreen(),
-            MessagesScreen(),
+            MessageScreen(
+              hasMessages: false,
+            ),
             TourScreen(),
             ProfileScreen(),
           ],
