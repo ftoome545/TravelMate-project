@@ -6,9 +6,10 @@ class GuideImageAndName extends StatelessWidget {
     super.key,
     required this.image,
     required this.name,
+    required this.city,
   });
 
-  final String image, name;
+  final String image, name, city;
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +25,23 @@ class GuideImageAndName extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.only(bottom: 10),
-          child: Text(
-            name,
-            style: AppStyles.styleMedium14
-                .copyWith(color: const Color(0xffFFFFFF)),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(
+                name,
+                style: AppStyles.styleBold16
+                    .copyWith(color: const Color(0xffFFFFFF)),
+              ),
+              const SizedBox(
+                height: 3,
+              ),
+              Text(
+                city,
+                style: AppStyles.styleRegular12
+                    .copyWith(color: const Color(0xffFFFFFF)),
+              ),
+            ],
           ),
         )
       ],

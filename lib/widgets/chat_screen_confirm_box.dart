@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:travel_mate/utils/app_images.dart';
 import 'package:travel_mate/utils/app_styles.dart';
+import 'package:travel_mate/widgets/guide_booking_screen.dart';
 
 class ChatScreenConfirmBox extends StatelessWidget {
   const ChatScreenConfirmBox({
@@ -44,7 +45,12 @@ class ChatScreenConfirmBox extends StatelessWidget {
                   height: 8,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const GuideBookingScreen()));
+                  },
                   child: Text(
                     'Confirm your booking',
                     style: AppStyles.styleSemiBold12
@@ -57,7 +63,12 @@ class ChatScreenConfirmBox extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 15),
             child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const GuideBookingScreen()));
+                },
                 child: SvgPicture.asset(Assets.imagesArrowRightIcon)),
           ),
         ],

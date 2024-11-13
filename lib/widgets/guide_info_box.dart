@@ -32,6 +32,7 @@ class GuideInfoBox extends StatelessWidget {
                 GuideImageAndName(
                   image: guideBoxInfoModel.image,
                   name: guideBoxInfoModel.name,
+                  city: guideBoxInfoModel.city,
                 ),
                 Expanded(
                   child: GuideInformation(

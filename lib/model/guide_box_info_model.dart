@@ -1,5 +1,5 @@
 class GuideBoxInfoModel {
-  final String image, name, brifData, reveiws, rating, price;
+  final String image, name, brifData, reveiws, rating, price, city;
 
   const GuideBoxInfoModel({
     required this.image,
@@ -8,5 +8,6 @@ class GuideBoxInfoModel {
     required this.reveiws,
     required this.rating,
     required this.price,
+    required this.city,
   });
 }

@@ -15,8 +15,13 @@ class ArrivedMessageBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const ChatScreen()));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => ChatScreen(
+                      image: arrivedMessageBoxModel.guideImage,
+                      name: arrivedMessageBoxModel.guideName,
+                    )));
       },
       child: Container(
         height: 154,

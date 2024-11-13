@@ -96,6 +96,7 @@ class GuideInformation extends StatelessWidget {
                   ),
                   GuideRatingDisplay(
                     guideRating: double.parse(rating),
+                    starSize: 15,
                   ),
                 ],
               ),

@@ -7,7 +7,12 @@ import 'package:travel_mate/widgets/chat_screen_message_area.dart';
 import 'package:travel_mate/widgets/chat_screen_message_text_field.dart';
 
 class ChatScreen extends StatelessWidget {
-  const ChatScreen({super.key});
+  const ChatScreen({
+    super.key,
+    required this.image,
+    required this.name,
+  });
+  final String image, name;
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +25,14 @@ class ChatScreen extends StatelessWidget {
         title: Row(
           children: [
             Image.asset(
-              Assets.imagesSarahCircleImage,
+              image,
               height: 50,
             ),
             const SizedBox(
               width: 10,
             ),
             Text(
-              'Sarah',
+              name,
               style: AppStyles.styleMedium14.copyWith(color: Colors.black),
             ),
           ],
@@ -38,22 +43,13 @@ class ChatScreen extends StatelessWidget {
           const SizedBox(width: 10),
         ],
       ),
-      body: const ChatBody(),
-    );
-  }
-}
-
-class ChatBody extends StatelessWidget {
-  const ChatBody({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        ChatScreenConfirmBox(),
-        Expanded(child: ChatScreenMessagesArea()),
-        ChatScreenMessageTextField(),
-      ],
+      body: const Column(
+        children: [
+          ChatScreenConfirmBox(),
+          Expanded(child: ChatScreenMessagesArea()),
+          ChatScreenMessageTextField(),
+        ],
+      ),
     );
   }
 }

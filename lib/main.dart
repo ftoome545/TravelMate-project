@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:travel_mate/model/guide_box_data.dart';
 import 'package:travel_mate/view/dashboard_view.dart';
 
 void main() {
@@ -10,7 +12,10 @@ class TravelMate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: DashboardView());
+    return ChangeNotifierProvider(
+      create: (context) => GuideBoxData(),
+      child: const MaterialApp(
+          debugShowCheckedModeBanner: false, home: DashboardView()),
+    );
   }
 }

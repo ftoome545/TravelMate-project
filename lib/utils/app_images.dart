@@ -67,8 +67,8 @@ class Assets {
   static const String imagesGuideAliImage = "assets/images/guide_Ali_image.png";
 
   /// Assets for imagesGuideImageInConfirmScreen
-  /// assets/images/guide_image_in_confirm_screen.svg
-  static const String imagesGuideImageInConfirmScreen = "assets/images/guide_image_in_confirm_screen.svg";
+  /// assets/images/guide_image_in_confirm_screen.png
+  static const String imagesGuideImageInConfirmScreen = "assets/images/guide_image_in_confirm_screen.png";
 
   /// Assets for imagesGuideOrTouristImage
   /// assets/images/guide_or_tourist_image.svg

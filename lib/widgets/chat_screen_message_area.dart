@@ -19,9 +19,9 @@ class ChatScreenMessagesArea extends StatelessWidget {
                 color: Color(0xffFFFFFF),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(30),
-                  bottomRight: Radius.circular(30),
-                  bottomLeft: Radius.circular(30),
+                  topRight: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                  bottomLeft: Radius.circular(20),
                 ))),
             child: Column(
               children: [
@@ -46,6 +46,114 @@ class ChatScreenMessagesArea extends StatelessWidget {
                     children: [
                       Text(
                         '10:35 am',
+                        style: AppStyles.styleRegular12,
+                      ),
+                      SizedBox(
+                        width: 15,
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: Container(
+            height: 88,
+            decoration: const ShapeDecoration(
+                color: Color(0xff4A6670),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                  bottomLeft: Radius.circular(20),
+                ))),
+            child: Column(
+              children: [
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        width: 19,
+                      ),
+                      Expanded(
+                        child: Text(
+                          "Hi, I’m Fatima I see your profile and I want to guide me to discover Riyadh",
+                          style: AppStyles.styleRegular14
+                              .copyWith(color: Colors.white),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        '10:36 am',
+                        style: AppStyles.styleRegular12
+                            .copyWith(color: const Color(0xffDBE0E2)),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: Container(
+            height: 87,
+            decoration: const ShapeDecoration(
+                color: Color(0xffFFFFFF),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                  bottomLeft: Radius.circular(20),
+                ))),
+            child: Column(
+              children: [
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        width: 35,
+                      ),
+                      Expanded(
+                        child: Text(
+                          "Thank you for contacting with me I’d be happy to help you. I’ll guide...",
+                          style: AppStyles.styleRegular14
+                              .copyWith(color: Colors.black),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 16,
+                      ),
+                    ],
+                  ),
+                ),
+                const Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        '10:36 am',
                         style: AppStyles.styleRegular12,
                       ),
                       SizedBox(
