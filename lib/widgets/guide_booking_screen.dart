@@ -4,6 +4,7 @@ import 'package:travel_mate/utils/app_images.dart';
 // import 'package:travel_mate/utils/app_images.dart';
 import 'package:travel_mate/utils/app_styles.dart';
 import 'package:travel_mate/widgets/guide_info_confirm_box.dart';
+import 'package:travel_mate/widgets/successfully_booking_dialog.dart';
 
 class GuideBookingScreen extends StatelessWidget {
   const GuideBookingScreen({super.key});
@@ -64,7 +65,14 @@ class GuideBookingScreen extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             )),
-                        onPressed: () {},
+                        onPressed: () {
+                          showDialog(
+                              useSafeArea: true,
+                              context: context,
+                              builder: (context) {
+                                return const SuccessfullyBookingDialog();
+                              });
+                        },
                         child: const Text(
                           'Confirm your booking',
                           style: AppStyles.styleSemiBold24,
