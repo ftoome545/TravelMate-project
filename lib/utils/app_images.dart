@@ -82,6 +82,10 @@ class Assets {
   /// assets/images/home_icon.svg
   static const String imagesHomeIcon = "assets/images/home_icon.svg";
 
+  /// Assets for imagesHomeScreenSearchForLocation
+  /// assets/images/home_screen_search_for_location.svg
+  static const String imagesHomeScreenSearchForLocation = "assets/images/home_screen_search_for_location.svg";
+
   /// Assets for imagesHomeScreenSearchImage
   /// assets/images/home_screen_search_image.svg
   static const String imagesHomeScreenSearchImage = "assets/images/home_screen_search_image.svg";

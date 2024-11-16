@@ -13,6 +13,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: const Color(0xffFFFFFF),
         appBar: AppBar(
+          backgroundColor: const Color(0xffFFFFFF),
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(50.0),
             child: Padding(
@@ -28,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                                 delegate: CustomSearchDelegate());
                           },
                           child: SvgPicture.asset(
-                              Assets.imagesHomeScreenSearchImage))),
+                              Assets.imagesHomeScreenSearchForLocation))),
                   const SizedBox(
                     width: 14,
                   ),

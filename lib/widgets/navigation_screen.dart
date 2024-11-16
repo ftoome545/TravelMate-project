@@ -52,12 +52,22 @@ class _NavigationScreenState extends State<NavigationScreen> {
             unselectedIconTheme: const IconThemeData(color: Color(0xff7AA0A7)),
             unselectedItemColor: const Color(0xff7AA0A7),
             items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.message), label: 'Message'),
-              BottomNavigationBarItem(icon: Icon(Icons.tour), label: 'Tour'),
+                  backgroundColor: Color(0xffFFFFFF),
+                  icon: Icon(Icons.home),
+                  label: 'Home'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.person), label: 'Profile'),
+                  backgroundColor: Color(0xffFFFFFF),
+                  icon: Icon(Icons.message),
+                  label: 'Message'),
+              BottomNavigationBarItem(
+                  backgroundColor: Color(0xffFFFFFF),
+                  icon: Icon(Icons.tour),
+                  label: 'Tour'),
+              BottomNavigationBarItem(
+                  backgroundColor: Color(0xffFFFFFF),
+                  icon: Icon(Icons.person),
+                  label: 'Profile'),
             ]));
   }
 }
