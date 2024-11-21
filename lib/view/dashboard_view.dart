@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_mate/widgets/adaptive_layout_widget.dart';
 import 'package:travel_mate/widgets/navigation_screen.dart';
-import 'package:travel_mate/widgets/mobile_layout.dart';
 
 class DashboardView extends StatelessWidget {
   const DashboardView({super.key});
@@ -11,9 +10,10 @@ class DashboardView extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xffFFFFFF),
       body: AdaptiveLayout(
-          mobileLayout: (context) => const NavigationScreen(),
-          tabletLayout: (context) => const SizedBox(),
-          desktopLayout: (context) => const SizedBox()),
+        mobileLayout: (context) => const NavigationScreen(),
+        tabletLayout: (context) => const NavigationScreen(),
+        desktopLayout: (context) => const NavigationScreen(),
+      ),
     );
   }
 }
