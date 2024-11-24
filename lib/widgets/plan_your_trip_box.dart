@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:travel_mate/utils/app_images.dart';
 import 'package:travel_mate/utils/app_styles.dart';
+import 'package:travel_mate/widgets/plan_your_trip_screen.dart';
 
 class PlanYourTripBox extends StatelessWidget {
   const PlanYourTripBox({
@@ -49,13 +50,19 @@ class PlanYourTripBox extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           )),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const PlanYourTripScreen()));
+                      },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             'Plan your trip',
-                            style: AppStyles.styleMedium14.copyWith(
+                            style: AppStyles.styleMedium20.copyWith(
                               color: const Color(0xffFFFFFF),
                             ),
                           ),
