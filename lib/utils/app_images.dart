@@ -10,6 +10,10 @@ class Assets {
   /// assets/images/arrow_right_icon.svg
   static const String imagesArrowRightIcon = "assets/images/arrow_right_icon.svg";
 
+  /// Assets for imagesBackGroundImageJeddah
+  /// assets/images/backGroundImageJeddah.png
+  static const String imagesBackGroundImageJeddah = "assets/images/backGroundImageJeddah.png";
+
   /// Assets for imagesBackIcon
   /// assets/images/back_icon.svg
   static const String imagesBackIcon = "assets/images/back_icon.svg";
@@ -17,6 +21,10 @@ class Assets {
   /// Assets for imagesBackIconLightColor
   /// assets/images/back_icon_lightColor.svg
   static const String imagesBackIconLightColor = "assets/images/back_icon_lightColor.svg";
+
+  /// Assets for imagesBackgroundImageJeddah
+  /// assets/images/background_image_Jeddah.jpg
+  static const String imagesBackgroundImageJeddah = "assets/images/background_image_Jeddah.jpg";
 
   /// Assets for imagesBrowseGuidesImage
   /// assets/images/browse_guides_image.svg

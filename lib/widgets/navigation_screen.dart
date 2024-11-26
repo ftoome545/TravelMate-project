@@ -36,7 +36,9 @@ class _NavigationScreenState extends State<NavigationScreen> {
             MessageScreen(
               hasMessages: true,
             ),
-            TourScreen(),
+            TourScreen(
+              hasTrip: true,
+            ),
             ProfileScreen(),
           ],
         ),
