@@ -6,7 +6,10 @@ import 'package:travel_mate/utils/app_styles.dart';
 class CreatedTripBoxImagePart extends StatelessWidget {
   const CreatedTripBoxImagePart({
     super.key,
+    required this.destination,
   });
+
+  final String destination;
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +79,7 @@ class CreatedTripBoxImagePart extends StatelessWidget {
                     width: 17.5,
                   ),
                   Text(
-                    'Trip to Taif Saudi Arabia',
+                    'Trip to $destination Saudi Arabia',
                     style:
                         AppStyles.styleSemiBold16.copyWith(color: Colors.white),
                   )
