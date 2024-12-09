@@ -122,10 +122,6 @@ class Assets {
   /// assets/images/my_location_image.svg
   static const String imagesMyLocationImage = "assets/images/my_location_image.svg";
 
-  /// Assets for imagesNewTripImageScreen
-  /// assets/images/new_trip_image_screen.svg
-  static const String imagesNewTripImageScreen = "assets/images/new_trip_image_screen.svg";
-
   /// Assets for imagesOptionsIcon
   /// assets/images/options_icon.svg
   static const String imagesOptionsIcon = "assets/images/options_icon.svg";
@@ -135,8 +131,8 @@ class Assets {
   static const String imagesPlusAddIcon = "assets/images/plus_add_icon.svg";
 
   /// Assets for imagesProfileAvatarImage
-  /// assets/images/profile_avatar_image.svg
-  static const String imagesProfileAvatarImage = "assets/images/profile_avatar_image.svg";
+  /// assets/images/profile_avatar_image.png
+  static const String imagesProfileAvatarImage = "assets/images/profile_avatar_image.png";
 
   /// Assets for imagesProfileIcon
   /// assets/images/profile_icon.svg
@@ -149,14 +145,6 @@ class Assets {
   /// Assets for imagesQuoteIcon2
   /// assets/images/quote_icon_2.svg
   static const String imagesQuoteIcon2 = "assets/images/quote_icon_2.svg";
-
-  /// Assets for imagesRatingStarsConfirmScreen
-  /// assets/images/rating_stars_confirm_screen.svg
-  static const String imagesRatingStarsConfirmScreen = "assets/images/rating_stars_confirm_screen.svg";
-
-  /// Assets for imagesRatingStarsImage
-  /// assets/images/rating_stars_image.svg
-  static const String imagesRatingStarsImage = "assets/images/rating_stars_image.svg";
 
   /// Assets for imagesSarahCircleImage
   /// assets/images/Sarah_circle_image.png
