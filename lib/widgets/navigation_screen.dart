@@ -31,6 +31,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
           onPageChanged: (index) {
             _selectedIndex = index;
           },
+          physics: const NeverScrollableScrollPhysics(),
           children: const [
             HomeScreen(),
             MessageScreen(

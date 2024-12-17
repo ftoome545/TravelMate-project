@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_mate/utils/app_styles.dart';
+import 'package:travel_mate/widgets/general_information_screen.dart';
 import 'package:travel_mate/widgets/languages_and_activites_choose.dart';
 import 'package:travel_mate/widgets/profile_screen_user_avatar.dart';
 import 'package:travel_mate/widgets/white_container_filter_page.dart';
@@ -26,8 +27,14 @@ class ProfileScreen extends StatelessWidget {
             WhiteContainerFilterpage(
                 height: 49,
                 child: LanguagesAndActivitesChoose(
-                  onTap: () {},
                   title: 'General information',
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const GeneralInformationScreen()));
+                  },
                 )),
             const SizedBox(
               height: 2,

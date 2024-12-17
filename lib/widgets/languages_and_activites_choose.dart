@@ -11,7 +11,7 @@ class LanguagesAndActivitesChoose extends StatelessWidget {
   });
 
   final String title;
-  final Function onTap;
+  final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -26,7 +26,7 @@ class LanguagesAndActivitesChoose extends StatelessWidget {
             ),
           ),
           GestureDetector(
-              onTap: onTap(),
+              onTap: onTap,
               child: SvgPicture.asset(Assets.imagesArrowRightIcon)),
         ],
       ),
