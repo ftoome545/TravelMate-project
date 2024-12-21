@@ -23,7 +23,7 @@ class _GeneralInformationScreenState extends State<GeneralInformationScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Your name', style: AppStyles.styleMedium20),
+          title: Text('Your name', style: AppStyles.styleMedium20(context)),
           content: TextField(
             cursorColor: const Color(0xff4A6670),
             controller: _controller,
@@ -46,7 +46,7 @@ class _GeneralInformationScreenState extends State<GeneralInformationScreen> {
               },
               child: Text(
                 'Cancel',
-                style: AppStyles.styleRegular16
+                style: AppStyles.styleRegular16(context)
                     .copyWith(color: const Color(0xff4A6670)),
               ),
             ),
@@ -62,7 +62,8 @@ class _GeneralInformationScreenState extends State<GeneralInformationScreen> {
               },
               child: Text(
                 'Save',
-                style: AppStyles.styleRegular16.copyWith(color: Colors.white),
+                style: AppStyles.styleRegular16(context)
+                    .copyWith(color: Colors.white),
               ),
             ),
           ],
@@ -78,7 +79,7 @@ class _GeneralInformationScreenState extends State<GeneralInformationScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('About You', style: AppStyles.styleMedium20),
+          title: Text('About You', style: AppStyles.styleMedium20(context)),
           content: TextField(
             cursorColor: const Color(0xff4A6670),
             controller: _controller,
@@ -101,7 +102,7 @@ class _GeneralInformationScreenState extends State<GeneralInformationScreen> {
               },
               child: Text(
                 'Cancel',
-                style: AppStyles.styleRegular16
+                style: AppStyles.styleRegular16(context)
                     .copyWith(color: const Color(0xff4A6670)),
               ),
             ),
@@ -117,7 +118,8 @@ class _GeneralInformationScreenState extends State<GeneralInformationScreen> {
               },
               child: Text(
                 'Save',
-                style: AppStyles.styleRegular16.copyWith(color: Colors.white),
+                style: AppStyles.styleRegular16(context)
+                    .copyWith(color: Colors.white),
               ),
             ),
           ],
@@ -131,16 +133,16 @@ class _GeneralInformationScreenState extends State<GeneralInformationScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Choose Profile Image',
-              style: AppStyles.styleMedium20),
+          title: Text('Choose Profile Image',
+              style: AppStyles.styleMedium20(context)),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
                 GestureDetector(
                   child: Text(
                     'Take a new photo',
-                    style:
-                        AppStyles.styleRegular14.copyWith(color: Colors.black),
+                    style: AppStyles.styleRegular14(context)
+                        .copyWith(color: Colors.black),
                   ),
                   onTap: () {
                     _chooseImage(ImageSource.camera);
@@ -152,8 +154,8 @@ class _GeneralInformationScreenState extends State<GeneralInformationScreen> {
                 GestureDetector(
                   child: Text(
                     'Select from gallery',
-                    style:
-                        AppStyles.styleRegular14.copyWith(color: Colors.black),
+                    style: AppStyles.styleRegular14(context)
+                        .copyWith(color: Colors.black),
                   ),
                   onTap: () {
                     _chooseImage(ImageSource.gallery);
@@ -208,9 +210,9 @@ class _GeneralInformationScreenState extends State<GeneralInformationScreen> {
         iconTheme: const IconThemeData(
           color: Color(0xff4A6670),
         ),
-        title: const Text(
+        title: Text(
           'General Information',
-          style: AppStyles.styleMedium20,
+          style: AppStyles.styleMedium20(context),
         ),
       ),
       body: Column(

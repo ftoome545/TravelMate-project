@@ -30,7 +30,7 @@ class GuideImageAndName extends StatelessWidget {
             children: [
               Text(
                 name,
-                style: AppStyles.styleBold16
+                style: AppStyles.styleBold16(context)
                     .copyWith(color: const Color(0xffFFFFFF)),
               ),
               const SizedBox(
@@ -38,7 +38,7 @@ class GuideImageAndName extends StatelessWidget {
               ),
               Text(
                 city,
-                style: AppStyles.styleRegular12
+                style: AppStyles.styleRegular12(context)
                     .copyWith(color: const Color(0xffFFFFFF)),
               ),
             ],

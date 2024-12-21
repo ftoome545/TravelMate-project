@@ -14,10 +14,10 @@ class SearchBar extends StatelessWidget {
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(24),
               side: const BorderSide(width: 1, color: Color(0xff7AA0A7)))),
-      child: const Expanded(
+      child: Expanded(
         child: Row(
           children: [
-            Expanded(
+            const Expanded(
               child: Icon(
                 Icons.search,
                 color: Color(0xff7AA0A7),
@@ -26,7 +26,7 @@ class SearchBar extends StatelessWidget {
             Expanded(
               child: Text(
                 'Search...',
-                style: AppStyles.styleRegular16,
+                style: AppStyles.styleRegular16(context),
               ),
             ),
           ],

@@ -29,7 +29,7 @@ class _ActivitiesAndLanguagesDialogState
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Title
-            const Text("Activities", style: AppStyles.styleMedium20),
+            Text("Activities", style: AppStyles.styleMedium20(context)),
             const SizedBox(height: 10),
 
             // List of checkboxes
@@ -62,7 +62,7 @@ class _ActivitiesAndLanguagesDialogState
                   },
                   child: Text(
                     'Cancel',
-                    style: AppStyles.styleRegular16
+                    style: AppStyles.styleRegular16(context)
                         .copyWith(color: const Color(0xff4A6670)),
                   ),
                 ),
@@ -77,8 +77,8 @@ class _ActivitiesAndLanguagesDialogState
                   },
                   child: Text(
                     'Save',
-                    style:
-                        AppStyles.styleRegular16.copyWith(color: Colors.white),
+                    style: AppStyles.styleRegular16(context)
+                        .copyWith(color: Colors.white),
                   ),
                 ),
               ],

@@ -68,7 +68,7 @@ class ProfileScreenUserAvatar extends StatelessWidget {
                             onPressed: () {},
                             child: Text(
                               'View Profile',
-                              style: AppStyles.styleMedium16
+                              style: AppStyles.styleMedium16(context)
                                   .copyWith(color: Colors.white),
                             ))),
                   ),
@@ -80,15 +80,15 @@ class ProfileScreenUserAvatar extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Row(
+              Row(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 24,
                   ),
                   Expanded(
                     child: Text(
                       'User Name',
-                      style: AppStyles.styleBold20,
+                      style: AppStyles.styleBold20(context),
                     ),
                   ),
                 ],

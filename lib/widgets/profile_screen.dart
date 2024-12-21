@@ -24,7 +24,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       builder: (BuildContext context) {
         return StatefulBuilder(builder: (context, setStateDialog) {
           return AlertDialog(
-            title: const Text('Currency', style: AppStyles.styleMedium20),
+            title: Text('Currency', style: AppStyles.styleMedium20(context)),
             content: ConstrainedBox(
               constraints: const BoxConstraints(maxHeight: 98),
               child: Column(
@@ -35,7 +35,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           WidgetStateProperty.all(const Color(0xff1C82AA)),
                       title: Text(
                         currencyType,
-                        style: AppStyles.styleMedium16
+                        style: AppStyles.styleMedium16(context)
                             .copyWith(color: const Color(0xffA2BDC2)),
                       ),
                       value: currencyType,
@@ -60,7 +60,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 },
                 child: Text(
                   'Cancel',
-                  style: AppStyles.styleRegular16
+                  style: AppStyles.styleRegular16(context)
                       .copyWith(color: const Color(0xff4A6670)),
                 ),
               ),
@@ -76,7 +76,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 },
                 child: Text(
                   'Save',
-                  style: AppStyles.styleRegular16.copyWith(color: Colors.white),
+                  style: AppStyles.styleRegular16(context)
+                      .copyWith(color: Colors.white),
                 ),
               ),
             ],
@@ -153,7 +154,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: [
                     Text(
                       'Currency',
-                      style: AppStyles.styleMedium16.copyWith(
+                      style: AppStyles.styleMedium16(context).copyWith(
                         color: const Color(0xffA2BDC2),
                       ),
                     ),
@@ -162,7 +163,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         if (currency != null)
                           Text(
                             '$currency',
-                            style: AppStyles.styleRegular12.copyWith(
+                            style: AppStyles.styleRegular12(context).copyWith(
                               color: Colors.grey.shade600,
                             ),
                           ),
@@ -245,7 +246,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   onPressed: () {},
                   child: Text(
                     'Log out',
-                    style: AppStyles.styleSemiBold18.copyWith(
+                    style: AppStyles.styleSemiBold18(context).copyWith(
                       color: const Color(0xffFF3B30),
                     ),
                   )),
@@ -253,10 +254,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const SizedBox(
               height: 24,
             ),
-            const Center(
+            Center(
               child: Text(
                 'Version 1.0.0',
-                style: AppStyles.styleRegular12,
+                style: AppStyles.styleRegular12(context),
               ),
             ),
             const SizedBox(
@@ -273,7 +274,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       padding: const EdgeInsets.only(left: 24),
       child: Text(
         filterSubTitle,
-        style: AppStyles.styleMedium16.copyWith(
+        style: AppStyles.styleMedium16(context).copyWith(
           color: Colors.black,
         ),
       ),

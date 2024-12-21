@@ -34,21 +34,21 @@ class ChatScreenMessagesArea extends StatelessWidget {
                       ),
                       Text(
                         'Hi, I’m Sarah how can I help you?',
-                        style: AppStyles.styleRegular14
+                        style: AppStyles.styleRegular14(context)
                             .copyWith(color: Colors.black),
                       ),
                     ],
                   ),
                 ),
-                const Expanded(
+                Expanded(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
                         '10:35 am',
-                        style: AppStyles.styleRegular12,
+                        style: AppStyles.styleRegular12(context),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 15,
                       )
                     ],
@@ -85,7 +85,7 @@ class ChatScreenMessagesArea extends StatelessWidget {
                       Expanded(
                         child: Text(
                           "Hi, I’m Fatima I see your profile and I want to guide me to discover Riyadh",
-                          style: AppStyles.styleRegular14
+                          style: AppStyles.styleRegular14(context)
                               .copyWith(color: Colors.white),
                         ),
                       ),
@@ -98,7 +98,7 @@ class ChatScreenMessagesArea extends StatelessWidget {
                     children: [
                       Text(
                         '10:36 am',
-                        style: AppStyles.styleRegular12
+                        style: AppStyles.styleRegular12(context)
                             .copyWith(color: const Color(0xffDBE0E2)),
                       ),
                       const SizedBox(
@@ -138,7 +138,7 @@ class ChatScreenMessagesArea extends StatelessWidget {
                       Expanded(
                         child: Text(
                           "Thank you for contacting with me I’d be happy to help you. I’ll guide...",
-                          style: AppStyles.styleRegular14
+                          style: AppStyles.styleRegular14(context)
                               .copyWith(color: Colors.black),
                         ),
                       ),
@@ -148,15 +148,15 @@ class ChatScreenMessagesArea extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Expanded(
+                Expanded(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
                         '10:36 am',
-                        style: AppStyles.styleRegular12,
+                        style: AppStyles.styleRegular12(context),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 15,
                       )
                     ],

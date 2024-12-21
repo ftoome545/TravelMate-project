@@ -34,7 +34,8 @@ class ChatScreen extends StatelessWidget {
             ),
             Text(
               name,
-              style: AppStyles.styleMedium14.copyWith(color: Colors.black),
+              style: AppStyles.styleMedium14(context)
+                  .copyWith(color: Colors.black),
             ),
           ],
         ),

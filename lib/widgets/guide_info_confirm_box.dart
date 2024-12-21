@@ -40,21 +40,24 @@ class GuideInfoConfirmBox extends StatelessWidget {
                 Text(
                   textAlign: TextAlign.center,
                   'I will be your tour guide for this trip',
-                  style: AppStyles.styleRegular14.copyWith(color: Colors.black),
+                  style: AppStyles.styleRegular14(context)
+                      .copyWith(color: Colors.black),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
                 Text(
                   'Name: Ahmed',
-                  style: AppStyles.styleRegular14.copyWith(color: Colors.black),
+                  style: AppStyles.styleRegular14(context)
+                      .copyWith(color: Colors.black),
                 ),
                 const SizedBox(
                   height: 6,
                 ),
                 Text(
                   'Age: 25',
-                  style: AppStyles.styleRegular14.copyWith(color: Colors.black),
+                  style: AppStyles.styleRegular14(context)
+                      .copyWith(color: Colors.black),
                 ),
                 const Divider(
                   height: 50,
@@ -62,7 +65,8 @@ class GuideInfoConfirmBox extends StatelessWidget {
                 ),
                 Text(
                   'Rating',
-                  style: AppStyles.styleRegular14.copyWith(color: Colors.black),
+                  style: AppStyles.styleRegular14(context)
+                      .copyWith(color: Colors.black),
                 ),
                 const SizedBox(
                   height: 11,

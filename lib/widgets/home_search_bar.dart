@@ -14,7 +14,7 @@ class HomeSearchBar extends StatelessWidget {
       backgroundColor: WidgetStateProperty.all(const Color(0xffFFFFFF)),
       leading: SvgPicture.asset(Assets.imagesSearchIconHomePage),
       hintText: 'Search...',
-      hintStyle: WidgetStateProperty.all(AppStyles.styleRegular16),
+      hintStyle: WidgetStateProperty.all(AppStyles.styleRegular16(context)),
       shadowColor: WidgetStateColor.transparent,
       side: WidgetStateProperty.all(const BorderSide(color: Color(0xff7AA0A7))),
     );

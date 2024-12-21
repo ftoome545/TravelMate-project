@@ -38,14 +38,15 @@ class NoMessagesYetShow extends StatelessWidget {
           ),
           Text(
             "You don’t have any messages yet",
-            style: AppStyles.styleMedium20.copyWith(color: Colors.black),
+            style:
+                AppStyles.styleMedium20(context).copyWith(color: Colors.black),
           ),
           const SizedBox(
             height: 3,
           ),
-          const Text(
+          Text(
             'When you do, you can find them here',
-            style: AppStyles.styleRegular14,
+            style: AppStyles.styleRegular14(context),
           ),
           const SizedBox(
             height: 30,
@@ -71,9 +72,9 @@ class NoMessagesYetShow extends StatelessWidget {
                                 builder: (context) =>
                                     const NavigationScreen()));
                       },
-                      child: const Text(
+                      child: Text(
                         'Browse a Guide',
-                        style: AppStyles.styleSemiBold24,
+                        style: AppStyles.styleSemiBold24(context),
                       )),
                 ),
               ),

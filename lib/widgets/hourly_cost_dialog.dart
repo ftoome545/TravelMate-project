@@ -22,7 +22,7 @@ class _HourlyCostDialogState extends State<HourlyCostDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text('Hourly cost', style: AppStyles.styleMedium20),
+      title: Text('Hourly cost', style: AppStyles.styleMedium20(context)),
       content: ConstrainedBox(
         constraints: const BoxConstraints(maxHeight: 295),
         child: Column(
@@ -31,7 +31,7 @@ class _HourlyCostDialogState extends State<HourlyCostDialog> {
           children: [
             Text(
               "I'll be your free travel mate",
-              style: AppStyles.styleMedium16.copyWith(
+              style: AppStyles.styleMedium16(context).copyWith(
                 color: Colors.black,
               ),
             ),
@@ -45,8 +45,8 @@ class _HourlyCostDialogState extends State<HourlyCostDialog> {
                     fillColor: WidgetStateProperty.all(const Color(0xff1C82AA)),
                     title: Text(
                       tourCost,
-                      style:
-                          AppStyles.styleMedium16.copyWith(color: Colors.black),
+                      style: AppStyles.styleMedium16(context)
+                          .copyWith(color: Colors.black),
                     ),
                     value: tourCost,
                     groupValue: widget.yesOrNo,

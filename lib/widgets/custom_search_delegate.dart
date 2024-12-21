@@ -10,8 +10,9 @@ class CustomSearchDelegate extends SearchDelegate {
         appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xffFFFFFF),
         ),
-        inputDecorationTheme: const InputDecorationTheme(
-            hintStyle: AppStyles.styleRegular16, border: InputBorder.none));
+        inputDecorationTheme: InputDecorationTheme(
+            hintStyle: AppStyles.styleRegular16(context),
+            border: InputBorder.none));
   }
 
   List<String> citiesName = [
@@ -109,14 +110,14 @@ class CustomSearchDelegate extends SearchDelegate {
                         text: TextSpan(
                           text:
                               suggestionList[index].substring(0, query.length),
-                          style: AppStyles.styleBold16.copyWith(
+                          style: AppStyles.styleBold16(context).copyWith(
                             color: Colors.black,
                           ),
                           children: [
                             TextSpan(
                               text:
                                   suggestionList[index].substring(query.length),
-                              style: AppStyles.styleRegular16
+                              style: AppStyles.styleRegular16(context)
                                   .copyWith(color: const Color(0xff7D848D)),
                             ),
                           ],

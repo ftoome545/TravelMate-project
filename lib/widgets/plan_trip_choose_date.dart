@@ -33,7 +33,7 @@ class _PlanTripChooseDateState extends State<PlanTripChooseDate> {
           ),
           Text(
             '${dateTime.year}/${dateTime.day}/${dateTime.month}',
-            style: AppStyles.styleMedium16
+            style: AppStyles.styleMedium16(context)
                 .copyWith(color: const Color(0xff7AA0A7)),
           ),
         ],

@@ -24,7 +24,7 @@ class _FilterGuideGenderState extends State<FilterGuideGender> {
             fillColor: WidgetStateProperty.all(const Color(0xff1C82AA)),
             title: Text(
               gender,
-              style: AppStyles.styleMedium16
+              style: AppStyles.styleMedium16(context)
                   .copyWith(color: const Color(0xffA2BDC2)),
             ),
             value: gender,

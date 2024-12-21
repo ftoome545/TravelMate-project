@@ -80,8 +80,8 @@ class CreatedTripBoxImagePart extends StatelessWidget {
                   ),
                   Text(
                     'Trip to $destination Saudi Arabia',
-                    style:
-                        AppStyles.styleSemiBold16.copyWith(color: Colors.white),
+                    style: AppStyles.styleSemiBold16(context)
+                        .copyWith(color: Colors.white),
                   )
                 ],
               ),

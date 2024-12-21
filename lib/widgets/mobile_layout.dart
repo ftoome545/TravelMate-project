@@ -16,10 +16,10 @@ class MobileLayout extends StatelessWidget {
           const SizedBox(
             height: 99,
           ),
-          const Text(
+          Text(
             textAlign: TextAlign.center,
             'Welcom to',
-            style: AppStyles.styleSemiBold25,
+            style: AppStyles.styleSemiBold25(context),
           ),
           const SizedBox(
             height: 15,
@@ -58,22 +58,22 @@ class MobileLayout extends StatelessWidget {
           ),
           RichText(
               textAlign: TextAlign.center,
-              text: const TextSpan(children: [
+              text: TextSpan(children: [
                 TextSpan(
                   text: "I confirm that I agree with TravelMate’s ",
-                  style: AppStyles.styleRegular16,
+                  style: AppStyles.styleRegular16(context),
                 ),
                 TextSpan(
                   text: "Terms of Service ",
-                  style: AppStyles.styleBold16,
+                  style: AppStyles.styleBold16(context),
                 ),
                 TextSpan(
                   text: "and ",
-                  style: AppStyles.styleRegular16,
+                  style: AppStyles.styleRegular16(context),
                 ),
                 TextSpan(
                   text: "Privacy Policy",
-                  style: AppStyles.styleBold16,
+                  style: AppStyles.styleBold16(context),
                 )
               ]))
         ],

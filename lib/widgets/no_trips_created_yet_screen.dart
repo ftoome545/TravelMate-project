@@ -18,16 +18,16 @@ class NoTripsCreatedYetScreen extends StatelessWidget {
           ),
           Text(
             'My Saved plans',
-            style: AppStyles.styleSemiBold25.copyWith(
+            style: AppStyles.styleSemiBold25(context).copyWith(
               color: Colors.black,
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 28),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 28),
             child: Text(
                 textAlign: TextAlign.center,
                 'No trips created yet? Start your first trip now and unlock exciting offers from locals eager to guide you.',
-                style: AppStyles.styleRegular16),
+                style: AppStyles.styleRegular16(context)),
           ),
         ],
       ),

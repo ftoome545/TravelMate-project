@@ -36,7 +36,7 @@ class GuideInformation extends StatelessWidget {
             textAlign: TextAlign.center,
             brifData,
             // 'Here we show the guide information',
-            style: AppStyles.styleRegular14.copyWith(
+            style: AppStyles.styleRegular14(context).copyWith(
               color: const Color(0xff000000),
             ),
           ),
@@ -65,7 +65,7 @@ class GuideInformation extends StatelessWidget {
                 children: [
                   Text(
                     'Reveiws',
-                    style: AppStyles.styleRegular12.copyWith(
+                    style: AppStyles.styleRegular12(context).copyWith(
                       color: Colors.black,
                     ),
                   ),
@@ -74,7 +74,7 @@ class GuideInformation extends StatelessWidget {
                   ),
                   Text(
                     reveiws,
-                    style: AppStyles.styleRegular12.copyWith(
+                    style: AppStyles.styleRegular12(context).copyWith(
                       color: Colors.black,
                     ),
                   ),
@@ -87,7 +87,7 @@ class GuideInformation extends StatelessWidget {
                 children: [
                   Text(
                     'Rating',
-                    style: AppStyles.styleRegular12.copyWith(
+                    style: AppStyles.styleRegular12(context).copyWith(
                       color: Colors.black,
                     ),
                   ),

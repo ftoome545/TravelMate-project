@@ -23,9 +23,9 @@ class GuideBookingScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: const Text(
+              child: Text(
                 'Cancel',
-                style: AppStyles.styleMedium20,
+                style: AppStyles.styleMedium20(context),
               ))
         ],
       ),
@@ -73,9 +73,9 @@ class GuideBookingScreen extends StatelessWidget {
                                 return const SuccessfullyBookingDialog();
                               });
                         },
-                        child: const Text(
+                        child: Text(
                           'Confirm your booking',
-                          style: AppStyles.styleSemiBold24,
+                          style: AppStyles.styleSemiBold24(context),
                         )),
                   ),
                 ),
@@ -87,9 +87,9 @@ class GuideBookingScreen extends StatelessWidget {
             const SizedBox(
               height: 24,
             ),
-            const Text(
+            Text(
               'Are you sure about the booking?',
-              style: AppStyles.styleRegular16,
+              style: AppStyles.styleRegular16(context),
             ),
             const SizedBox(
               height: 13,
@@ -97,7 +97,8 @@ class GuideBookingScreen extends StatelessWidget {
             Text(
               textAlign: TextAlign.center,
               'You will not be able to cancel the booking after confirmation',
-              style: AppStyles.styleMedium16.copyWith(color: Colors.black),
+              style: AppStyles.styleMedium16(context)
+                  .copyWith(color: Colors.black),
             ),
             const SizedBox(
               height: 46,

@@ -30,16 +30,16 @@ class ChatScreenConfirmBox extends StatelessWidget {
                 ),
                 Text(
                   'Booking with Sarah',
-                  style: AppStyles.styleMedium12.copyWith(
+                  style: AppStyles.styleMedium12(context).copyWith(
                     color: Colors.black,
                   ),
                 ),
                 const SizedBox(
                   height: 1,
                 ),
-                const Text(
+                Text(
                   'Saudi Arabia, Riyadh',
-                  style: AppStyles.styleRegular10,
+                  style: AppStyles.styleRegular10(context),
                 ),
                 const SizedBox(
                   height: 8,
@@ -53,7 +53,7 @@ class ChatScreenConfirmBox extends StatelessWidget {
                   },
                   child: Text(
                     'Confirm your booking',
-                    style: AppStyles.styleSemiBold12
+                    style: AppStyles.styleSemiBold12(context)
                         .copyWith(color: const Color(0xff1C82AA)),
                   ),
                 ),

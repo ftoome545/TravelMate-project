@@ -22,7 +22,7 @@ class _EmailIdentificationState extends State<EmailIdentification> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Email', style: AppStyles.styleMedium20),
+          title: Text('Email', style: AppStyles.styleMedium20(context)),
           content: TextField(
             cursorColor: const Color(0xff4A6670),
             controller: _controller,
@@ -45,7 +45,7 @@ class _EmailIdentificationState extends State<EmailIdentification> {
               },
               child: Text(
                 'Cancel',
-                style: AppStyles.styleRegular16
+                style: AppStyles.styleRegular16(context)
                     .copyWith(color: const Color(0xff4A6670)),
               ),
             ),
@@ -61,7 +61,8 @@ class _EmailIdentificationState extends State<EmailIdentification> {
               },
               child: Text(
                 'Save',
-                style: AppStyles.styleRegular16.copyWith(color: Colors.white),
+                style: AppStyles.styleRegular16(context)
+                    .copyWith(color: Colors.white),
               ),
             ),
           ],
@@ -79,9 +80,9 @@ class _EmailIdentificationState extends State<EmailIdentification> {
         iconTheme: const IconThemeData(
           color: Color(0xff4A6670),
         ),
-        title: const Text(
+        title: Text(
           'Email Identification',
-          style: AppStyles.styleMedium20,
+          style: AppStyles.styleMedium20(context),
         ),
       ),
       body: Column(
@@ -98,7 +99,7 @@ class _EmailIdentificationState extends State<EmailIdentification> {
                 children: [
                   Text(
                     'Email',
-                    style: AppStyles.styleMedium16.copyWith(
+                    style: AppStyles.styleMedium16(context).copyWith(
                       color: const Color(0xffA2BDC2),
                     ),
                   ),
@@ -107,7 +108,7 @@ class _EmailIdentificationState extends State<EmailIdentification> {
                       if (yourEmail != "")
                         Text(
                           yourEmail,
-                          style: AppStyles.styleRegular12.copyWith(
+                          style: AppStyles.styleRegular12(context).copyWith(
                             color: Colors.grey.shade600,
                           ),
                         ),

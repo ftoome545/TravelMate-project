@@ -60,9 +60,9 @@ class _SearchLocationTextfeildState extends State<SearchLocationTextfeild> {
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Color(0xff4A6670)),
         backgroundColor: Colors.white,
-        title: const Text(
+        title: Text(
           'Your Location',
-          style: AppStyles.styleMedium20,
+          style: AppStyles.styleMedium20(context),
         ),
       ),
       body: Column(
@@ -124,7 +124,7 @@ class _SearchLocationTextfeildState extends State<SearchLocationTextfeild> {
                     ),
                     title: Text(
                       _filteredLocations[index],
-                      style: AppStyles.styleRegular16
+                      style: AppStyles.styleRegular16(context)
                           .copyWith(color: Colors.black),
                     ),
                     onTap: () {

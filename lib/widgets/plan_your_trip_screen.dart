@@ -15,18 +15,18 @@ class PlanYourTripScreen extends StatelessWidget {
       appBar: AppBar(
           backgroundColor: Colors.white,
           centerTitle: true,
-          title: const Text(
+          title: Text(
             'Plan your trip',
-            style: AppStyles.styleMedium20,
+            style: AppStyles.styleMedium20(context),
           ),
           iconTheme: const IconThemeData(
             color: Color(0xff4A6670),
           ),
           actions: [
             TextButton(
-              child: const Text(
+              child: Text(
                 'Apply',
-                style: AppStyles.styleSemiBold20,
+                style: AppStyles.styleSemiBold20(context),
               ),
               onPressed: () {},
             ),
@@ -38,7 +38,7 @@ class PlanYourTripScreen extends StatelessWidget {
             const SizedBox(
               height: 24,
             ),
-            planTripSubTitles('Where you want to go?'),
+            planTripSubTitles(context, 'Where you want to go?'),
             const SizedBox(
               height: 10,
             ),
@@ -47,7 +47,7 @@ class PlanYourTripScreen extends StatelessWidget {
             const SizedBox(
               height: 32,
             ),
-            planTripSubTitles('Choose a date from'),
+            planTripSubTitles(context, 'Choose a date from'),
             const SizedBox(
               height: 10,
             ),
@@ -56,7 +56,7 @@ class PlanYourTripScreen extends StatelessWidget {
             const SizedBox(
               height: 32,
             ),
-            planTripSubTitles('Choose a date To'),
+            planTripSubTitles(context, 'Choose a date To'),
             const SizedBox(
               height: 10,
             ),
@@ -65,7 +65,7 @@ class PlanYourTripScreen extends StatelessWidget {
             const SizedBox(
               height: 32,
             ),
-            planTripSubTitles('Group size'),
+            planTripSubTitles(context, 'Group size'),
             const SizedBox(
               height: 10,
             ),
@@ -77,7 +77,7 @@ class PlanYourTripScreen extends StatelessWidget {
             const SizedBox(
               height: 32,
             ),
-            planTripSubTitles('Searching for a local guide'),
+            planTripSubTitles(context, 'Searching for a local guide'),
             const SizedBox(
               height: 10,
             ),
@@ -89,9 +89,10 @@ class PlanYourTripScreen extends StatelessWidget {
             const SizedBox(
               height: 8,
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 24),
-              child: Text('Field is required', style: AppStyles.styleMedium12),
+            Padding(
+              padding: const EdgeInsets.only(left: 24),
+              child: Text('Field is required',
+                  style: AppStyles.styleMedium12(context)),
             ),
             const SizedBox(
               height: 8,
@@ -117,7 +118,7 @@ class PlanYourTripScreen extends StatelessWidget {
                           children: [
                             Text(
                               'Plan your trip',
-                              style: AppStyles.styleMedium20.copyWith(
+                              style: AppStyles.styleMedium20(context).copyWith(
                                 color: const Color(0xffFFFFFF),
                               ),
                             ),
@@ -139,12 +140,12 @@ class PlanYourTripScreen extends StatelessWidget {
     );
   }
 
-  Padding planTripSubTitles(String filterSubTitle) {
+  Padding planTripSubTitles(BuildContext context, String filterSubTitle) {
     return Padding(
       padding: const EdgeInsets.only(left: 24),
       child: Text(
         filterSubTitle,
-        style: AppStyles.styleMedium16.copyWith(
+        style: AppStyles.styleMedium16(context).copyWith(
           color: Colors.black,
         ),
       ),

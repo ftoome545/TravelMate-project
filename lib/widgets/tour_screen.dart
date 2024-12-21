@@ -14,9 +14,9 @@ class TourScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text(
+        title: Text(
           'Trips',
-          style: AppStyles.styleMedium20,
+          style: AppStyles.styleMedium20(context),
         ),
         centerTitle: true,
       ),

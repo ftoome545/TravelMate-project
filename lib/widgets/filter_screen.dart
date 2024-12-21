@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:travel_mate/utils/app_images.dart';
 import 'package:travel_mate/utils/app_styles.dart';
+import 'package:travel_mate/widgets/activities_and_languages.dart';
 import 'package:travel_mate/widgets/filter_guide_gender.dart';
 import 'package:travel_mate/widgets/languages_and_activites_choose.dart';
 import 'package:travel_mate/widgets/price_range_slider.dart';
@@ -17,6 +18,39 @@ class FilterScreen extends StatefulWidget {
 class _FilterScreenState extends State<FilterScreen> {
   RangeValues _currentRangeValues = const RangeValues(0, 0);
   String? selectedGender;
+  final Map<String, bool> activities = {
+    "Translation": false,
+    "Shopping": false,
+    "Restaurants": false,
+    "Museums": false,
+    "Culture": false,
+  };
+
+  final Map<String, bool> languages = {
+    "Arabic": false,
+    "English": false,
+    "German": false,
+    "Chinese": false,
+    "Spanish": false,
+  };
+  void _showLanguagesDialog() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return ActivitiesAndLanguagesDialog(activities: languages);
+      },
+    );
+  }
+
+  void _showActivitiesDialog() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return ActivitiesAndLanguagesDialog(activities: activities);
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,9 +58,9 @@ class _FilterScreenState extends State<FilterScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
-        title: const Text(
+        title: Text(
           'Filters',
-          style: AppStyles.styleRegular20,
+          style: AppStyles.styleRegular20(context),
         ),
         iconTheme: const IconThemeData(color: Color(0xff4A6670)),
         actions: [
@@ -34,11 +68,11 @@ class _FilterScreenState extends State<FilterScreen> {
             onTap: () {
               print('here is where you pass filter data to SearchDelegate ');
             },
-            child: const Padding(
-              padding: EdgeInsets.only(right: 23),
+            child: Padding(
+              padding: const EdgeInsets.only(right: 23),
               child: Text(
                 'Apply',
-                style: AppStyles.styleSemiBold20,
+                style: AppStyles.styleSemiBold20(context),
               ),
             ),
           ),
@@ -72,7 +106,9 @@ class _FilterScreenState extends State<FilterScreen> {
                 height: 49,
                 child: LanguagesAndActivitesChoose(
                   title: 'choose languages',
-                  onTap: () {},
+                  onTap: () {
+                    _showLanguagesDialog();
+                  },
                 )),
             const SizedBox(
               height: 20,
@@ -85,7 +121,9 @@ class _FilterScreenState extends State<FilterScreen> {
                 height: 49,
                 child: LanguagesAndActivitesChoose(
                   title: 'Choose Activities',
-                  onTap: () {},
+                  onTap: () {
+                    _showActivitiesDialog();
+                  },
                 )),
             const SizedBox(
               height: 20,
@@ -117,10 +155,11 @@ class _FilterScreenState extends State<FilterScreen> {
             ),
             GestureDetector(
                 onTap: () {},
-                child: const Center(
+                child: Center(
                   child: Text(
                     'Clear Filters',
-                    style: AppStyles.styleSemiBold12,
+                    style: AppStyles.styleSemiBold16(context)
+                        .copyWith(color: const Color(0xffFF3B30)),
                   ),
                 )),
             const SizedBox(
@@ -137,7 +176,7 @@ class _FilterScreenState extends State<FilterScreen> {
       padding: const EdgeInsets.only(left: 24),
       child: Text(
         filterSubTitle,
-        style: AppStyles.styleMedium16.copyWith(
+        style: AppStyles.styleMedium16(context).copyWith(
           color: Colors.black,
         ),
       ),

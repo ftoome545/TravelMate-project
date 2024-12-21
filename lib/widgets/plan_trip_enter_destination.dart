@@ -17,7 +17,7 @@ class PlanTripEnterDestination extends StatelessWidget {
             child: TextField(
           decoration: InputDecoration(
               hintText: 'Enter Destination',
-              hintStyle: AppStyles.styleMedium16
+              hintStyle: AppStyles.styleMedium16(context)
                   .copyWith(color: const Color(0xff7AA0A7)),
               enabledBorder: const UnderlineInputBorder(
                 borderSide: BorderSide.none,

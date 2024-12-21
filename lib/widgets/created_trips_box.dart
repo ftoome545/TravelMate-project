@@ -44,7 +44,8 @@ class CreatedTripsBox extends StatelessWidget {
               ),
               Text(
                 '${DateFormat('yyyy-MM-dd').format(createdTripsModel.fromDate)} To ${DateFormat('yyyy-MM-dd').format(createdTripsModel.toDate)}',
-                style: AppStyles.styleMedium16.copyWith(color: Colors.black),
+                style: AppStyles.styleMedium16(context)
+                    .copyWith(color: Colors.black),
               ),
               const SizedBox(
                 width: 16,
@@ -66,7 +67,7 @@ class CreatedTripsBox extends StatelessWidget {
               ),
               Text(
                 'Group size:',
-                style: AppStyles.styleMedium16
+                style: AppStyles.styleMedium16(context)
                     .copyWith(color: const Color(0xff7AA0A7)),
               ),
               const SizedBox(
@@ -74,7 +75,7 @@ class CreatedTripsBox extends StatelessWidget {
               ),
               Text(
                 createdTripsModel.groupSize,
-                style: AppStyles.styleMedium16
+                style: AppStyles.styleMedium16(context)
                     .copyWith(color: const Color(0xff000000)),
               ),
             ],

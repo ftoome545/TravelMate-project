@@ -31,7 +31,7 @@ class ChatScreenMessageTextField extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                           hintText: 'Write your message here',
-                          hintStyle: AppStyles.styleRegular14
+                          hintStyle: AppStyles.styleRegular14(context)
                               .copyWith(color: const Color(0xff7AA0A7)),
                           border: InputBorder.none),
                     ),

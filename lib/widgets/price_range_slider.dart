@@ -20,18 +20,18 @@ class _PriceRageSliderState extends State<PriceRageSlider> {
     return Column(
       children: [
         const SizedBox(height: 10),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 'Free',
-                style: AppStyles.styleMedium16,
+                style: AppStyles.styleMedium16(context),
               ),
               Text(
                 '100 SAR',
-                style: AppStyles.styleMedium16,
+                style: AppStyles.styleMedium16(context),
               ),
             ],
           ),

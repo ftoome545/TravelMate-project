@@ -48,7 +48,7 @@ class ArrivedMessageBox extends StatelessWidget {
                       children: [
                         Text(
                           'Booking with ${arrivedMessageBoxModel.guideName}...',
-                          style: AppStyles.styleMedium14.copyWith(
+                          style: AppStyles.styleMedium14(context).copyWith(
                             color: Colors.black,
                           ),
                         ),
@@ -57,7 +57,7 @@ class ArrivedMessageBox extends StatelessWidget {
                         ),
                         Text(
                           arrivedMessageBoxModel.date,
-                          style: AppStyles.styleLight14
+                          style: AppStyles.styleLight14(context)
                               .copyWith(color: const Color(0xff9DA4A9)),
                         ),
                       ],
@@ -70,7 +70,7 @@ class ArrivedMessageBox extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 17),
                     child: Text(
                       arrivedMessageBoxModel.message,
-                      style: AppStyles.styleLight14
+                      style: AppStyles.styleLight14(context)
                           .copyWith(color: const Color(0xff9DA4A9)),
                     ),
                   )

@@ -22,7 +22,7 @@ class CreatedTripsScreen extends StatelessWidget {
               child: Text(
                 textAlign: TextAlign.center,
                 'My plans',
-                style: AppStyles.styleSemiBold18.copyWith(
+                style: AppStyles.styleSemiBold18(context).copyWith(
                   color: Colors.black,
                 ),
               ),

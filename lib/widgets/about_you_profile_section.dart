@@ -46,7 +46,7 @@ class _AboutYouProfileSectionState extends State<AboutYouProfileSection> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('About You', style: AppStyles.styleMedium20),
+          title: Text('About You', style: AppStyles.styleMedium20(context)),
           content: TextField(
             cursorColor: const Color(0xff4A6670),
             controller: _controller,
@@ -70,7 +70,7 @@ class _AboutYouProfileSectionState extends State<AboutYouProfileSection> {
               },
               child: Text(
                 'Cancel',
-                style: AppStyles.styleRegular16
+                style: AppStyles.styleRegular16(context)
                     .copyWith(color: const Color(0xff4A6670)),
               ),
             ),
@@ -86,7 +86,8 @@ class _AboutYouProfileSectionState extends State<AboutYouProfileSection> {
               },
               child: Text(
                 'Save',
-                style: AppStyles.styleRegular16.copyWith(color: Colors.white),
+                style: AppStyles.styleRegular16(context)
+                    .copyWith(color: Colors.white),
               ),
             ),
           ],
@@ -138,7 +139,7 @@ class _AboutYouProfileSectionState extends State<AboutYouProfileSection> {
       builder: (BuildContext context) {
         return StatefulBuilder(builder: (context, setStateDialog) {
           return AlertDialog(
-            title: const Text('My Gender', style: AppStyles.styleMedium20),
+            title: Text('My Gender', style: AppStyles.styleMedium20(context)),
             content: ConstrainedBox(
               constraints: const BoxConstraints(maxHeight: 98),
               child: Column(
@@ -149,7 +150,7 @@ class _AboutYouProfileSectionState extends State<AboutYouProfileSection> {
                           WidgetStateProperty.all(const Color(0xff1C82AA)),
                       title: Text(
                         gender,
-                        style: AppStyles.styleMedium16
+                        style: AppStyles.styleMedium16(context)
                             .copyWith(color: const Color(0xffA2BDC2)),
                       ),
                       value: gender,
@@ -174,7 +175,7 @@ class _AboutYouProfileSectionState extends State<AboutYouProfileSection> {
                 },
                 child: Text(
                   'Cancel',
-                  style: AppStyles.styleRegular16
+                  style: AppStyles.styleRegular16(context)
                       .copyWith(color: const Color(0xff4A6670)),
                 ),
               ),
@@ -190,7 +191,8 @@ class _AboutYouProfileSectionState extends State<AboutYouProfileSection> {
                 },
                 child: Text(
                   'Save',
-                  style: AppStyles.styleRegular16.copyWith(color: Colors.white),
+                  style: AppStyles.styleRegular16(context)
+                      .copyWith(color: Colors.white),
                 ),
               ),
             ],
@@ -209,116 +211,120 @@ class _AboutYouProfileSectionState extends State<AboutYouProfileSection> {
         iconTheme: const IconThemeData(
           color: Color(0xff4A6670),
         ),
-        title: const Text(
+        title: Text(
           'About You',
-          style: AppStyles.styleMedium20,
+          style: AppStyles.styleMedium20(context),
         ),
       ),
-      body: Column(
-        children: [
-          const SizedBox(
-            height: 40,
-          ),
-          GeneralInfoSections(
-            variableName: iWillGuideYou,
-            functionName: _showIWillGuideYouDialog,
-            title: 'I Will Guide You',
-          ),
-          const SizedBox(
-            height: 24,
-          ),
-          WhiteContainerFilterpage(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 40,
+            ),
+            GeneralInfoSections(
+              variableName: iWillGuideYou,
+              functionName: _showIWillGuideYouDialog,
+              title: 'I Will Guide You',
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            WhiteContainerFilterpage(
+                height: 49,
+                child: LanguagesAndActivitesChoose(
+                  onTap: () {
+                    _showActivitiesDialog();
+                  },
+                  title: 'Activities ',
+                )),
+            const SizedBox(
+              height: 24,
+            ),
+            WhiteContainerFilterpage(
               height: 49,
-              child: LanguagesAndActivitesChoose(
-                onTap: () {
-                  _showActivitiesDialog();
-                },
-                title: 'Activities ',
-              )),
-          const SizedBox(
-            height: 24,
-          ),
-          WhiteContainerFilterpage(
-            height: 49,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Hourly Cost',
-                    style: AppStyles.styleMedium16.copyWith(
-                      color: const Color(0xffA2BDC2),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Hourly Cost',
+                      style: AppStyles.styleMedium16(context).copyWith(
+                        color: const Color(0xffA2BDC2),
+                      ),
                     ),
-                  ),
-                  Row(
-                    children: [
-                      if (hourlyCost != null && currency != null)
-                        Text(
-                          '$hourlyCost $currency',
-                          style: AppStyles.styleRegular12.copyWith(
-                            color: Colors.grey.shade600,
+                    Row(
+                      children: [
+                        if (hourlyCost != null && currency != null)
+                          Text(
+                            '$hourlyCost $currency',
+                            style: AppStyles.styleRegular12(context).copyWith(
+                              color: Colors.grey.shade600,
+                            ),
                           ),
-                        ),
-                      GestureDetector(
-                          onTap: () {
-                            _showHourlyCostDialog();
-                          },
-                          child: SvgPicture.asset(Assets.imagesArrowRightIcon)),
-                    ],
-                  ),
-                ],
+                        GestureDetector(
+                            onTap: () {
+                              _showHourlyCostDialog();
+                            },
+                            child:
+                                SvgPicture.asset(Assets.imagesArrowRightIcon)),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          const SizedBox(
-            height: 24,
-          ),
-          WhiteContainerFilterpage(
-            height: 49,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'My Gender',
-                    style: AppStyles.styleMedium16.copyWith(
-                      color: const Color(0xffA2BDC2),
+            const SizedBox(
+              height: 24,
+            ),
+            WhiteContainerFilterpage(
+              height: 49,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'My Gender',
+                      style: AppStyles.styleMedium16(context).copyWith(
+                        color: const Color(0xffA2BDC2),
+                      ),
                     ),
-                  ),
-                  Row(
-                    children: [
-                      if (myGender != null)
-                        Text(
-                          '$myGender',
-                          style: AppStyles.styleRegular12.copyWith(
-                            color: Colors.grey.shade600,
+                    Row(
+                      children: [
+                        if (myGender != null)
+                          Text(
+                            '$myGender',
+                            style: AppStyles.styleRegular12(context).copyWith(
+                              color: Colors.grey.shade600,
+                            ),
                           ),
-                        ),
-                      GestureDetector(
-                          onTap: () {
-                            _showMyGenderDialog();
-                          },
-                          child: SvgPicture.asset(Assets.imagesArrowRightIcon)),
-                    ],
-                  ),
-                ],
+                        GestureDetector(
+                            onTap: () {
+                              _showMyGenderDialog();
+                            },
+                            child:
+                                SvgPicture.asset(Assets.imagesArrowRightIcon)),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          const SizedBox(
-            height: 24,
-          ),
-          WhiteContainerFilterpage(
-              height: 49,
-              child: LanguagesAndActivitesChoose(
-                onTap: () {
-                  _showLanguagesDialog();
-                },
-                title: 'Languages ',
-              )),
-        ],
+            const SizedBox(
+              height: 24,
+            ),
+            WhiteContainerFilterpage(
+                height: 49,
+                child: LanguagesAndActivitesChoose(
+                  onTap: () {
+                    _showLanguagesDialog();
+                  },
+                  title: 'Languages ',
+                )),
+          ],
+        ),
       ),
     );
   }

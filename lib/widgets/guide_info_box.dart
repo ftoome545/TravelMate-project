@@ -61,7 +61,8 @@ class GuideInfoBox extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 7),
               child: Text(
                 guideBoxInfoModel.price,
-                style: AppStyles.styleRegular12.copyWith(color: Colors.white),
+                style: AppStyles.styleRegular12(context)
+                    .copyWith(color: Colors.white),
               ),
             ),
           ),

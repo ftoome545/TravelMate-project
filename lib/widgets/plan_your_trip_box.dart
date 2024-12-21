@@ -27,7 +27,7 @@ class PlanYourTripBox extends StatelessWidget {
             child: Text(
               textAlign: TextAlign.center,
               'Plan your trip in advance and receive offers from locals to save time',
-              style: AppStyles.styleMedium14.copyWith(
+              style: AppStyles.styleMedium14(context).copyWith(
                 color: const Color(0xff7AA0A7),
               ),
             ),
@@ -62,7 +62,7 @@ class PlanYourTripBox extends StatelessWidget {
                         children: [
                           Text(
                             'Plan your trip',
-                            style: AppStyles.styleMedium20.copyWith(
+                            style: AppStyles.styleMedium20(context).copyWith(
                               color: const Color(0xffFFFFFF),
                             ),
                           ),
