@@ -166,10 +166,10 @@ abstract class AppStyles {
     );
   }
 
-  static TextStyle styleMedium12(context) {
+  static TextStyle styleMedium15(context) {
     return TextStyle(
       color: const Color(0xffFF3B30),
-      fontSize: getResponsiveFontSize(context, fontSize: 12),
+      fontSize: getResponsiveFontSize(context, fontSize: 15),
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w500,
     );

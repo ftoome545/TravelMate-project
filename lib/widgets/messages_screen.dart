@@ -10,19 +10,20 @@ class MessageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: false,
         backgroundColor: Colors.white,
         title: Text(
           'Messages',
           style: AppStyles.styleSemiBold30(context),
         ),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.filter_list,
-                color: Color(0xff4A6670),
-              )),
-        ],
+        // actions: [
+        //   IconButton(
+        //       onPressed: () {},
+        //       icon: const Icon(
+        //         Icons.filter_list,
+        //         color: Color(0xff4A6670),
+        //       )),
+        // ],
         // bottom: PreferredSize(
         //     preferredSize: const Size.fromHeight(20),
         //     child: Padding(

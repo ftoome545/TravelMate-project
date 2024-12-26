@@ -30,7 +30,7 @@ class ChatScreenConfirmBox extends StatelessWidget {
                 ),
                 Text(
                   'Booking with Sarah',
-                  style: AppStyles.styleMedium12(context).copyWith(
+                  style: AppStyles.styleMedium15(context).copyWith(
                     color: Colors.black,
                   ),
                 ),
