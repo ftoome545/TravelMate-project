@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:travel_mate/utils/app_images.dart';
 import 'package:travel_mate/utils/app_styles.dart';
 import 'package:travel_mate/widgets/about_you_profile_section.dart';
+import 'package:travel_mate/widgets/delete_user_account.dart';
 import 'package:travel_mate/widgets/email_identification.dart';
 import 'package:travel_mate/widgets/general_information_screen.dart';
 import 'package:travel_mate/widgets/languages_and_activites_choose.dart';
@@ -242,7 +243,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
             WhiteContainerFilterpage(
                 height: 49,
                 child: LanguagesAndActivitesChoose(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const DeleteUserAccount()));
+                  },
                   title: 'Delete account',
                 )),
             const SizedBox(
