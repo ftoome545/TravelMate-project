@@ -8,6 +8,7 @@ import 'package:travel_mate/widgets/email_identification.dart';
 import 'package:travel_mate/widgets/general_information_screen.dart';
 import 'package:travel_mate/widgets/languages_and_activites_choose.dart';
 import 'package:travel_mate/widgets/notification_settings_screen.dart';
+import 'package:travel_mate/widgets/privacy_policy_screen.dart';
 import 'package:travel_mate/widgets/profile_screen_user_avatar.dart';
 import 'package:travel_mate/widgets/white_container_filter_page.dart';
 
@@ -225,7 +226,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
             WhiteContainerFilterpage(
                 height: 49,
                 child: LanguagesAndActivitesChoose(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const PrivacyPolicyScreen()));
+                  },
                   title: 'Privacy policy',
                 )),
             const SizedBox(
