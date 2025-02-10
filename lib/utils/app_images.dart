@@ -6,6 +6,10 @@ class Assets {
   /// assets/images/Ahmed_guide_circle_image.png
   static const String imagesAhmedGuideCircleImage = "assets/images/Ahmed_guide_circle_image.png";
 
+  /// Assets for imagesAppLogo
+  /// assets/images/app_logo.svg
+  static const String imagesAppLogo = "assets/images/app_logo.svg";
+
   /// Assets for imagesArrowRightIcon
   /// assets/images/arrow_right_icon.svg
   static const String imagesArrowRightIcon = "assets/images/arrow_right_icon.svg";
@@ -79,8 +83,8 @@ class Assets {
   static const String imagesGuideImageInConfirmScreen = "assets/images/guide_image_in_confirm_screen.png";
 
   /// Assets for imagesGuideOrTouristImage
-  /// assets/images/guide_or_tourist_image.svg
-  static const String imagesGuideOrTouristImage = "assets/images/guide_or_tourist_image.svg";
+  /// assets/images/guide_or_tourist_image.png
+  static const String imagesGuideOrTouristImage = "assets/images/guide_or_tourist_image.png";
 
   /// Assets for imagesGuideSarahImage
   /// assets/images/guide_Sarah_image.png
@@ -119,8 +123,8 @@ class Assets {
   static const String imagesMoreIcon = "assets/images/more_icon.svg";
 
   /// Assets for imagesMyLocationImage
-  /// assets/images/my_location_image.svg
-  static const String imagesMyLocationImage = "assets/images/my_location_image.svg";
+  /// assets/images/my_location_image.png
+  static const String imagesMyLocationImage = "assets/images/my_location_image.png";
 
   /// Assets for imagesOptionsIcon
   /// assets/images/options_icon.svg
@@ -159,8 +163,8 @@ class Assets {
   static const String imagesSearchIconHomePage = "assets/images/search_icon_home_page.svg";
 
   /// Assets for imagesSelectGenderImage
-  /// assets/images/select_gender_image.svg
-  static const String imagesSelectGenderImage = "assets/images/select_gender_image.svg";
+  /// assets/images/select_gender_image.png
+  static const String imagesSelectGenderImage = "assets/images/select_gender_image.png";
 
   /// Assets for imagesSendIcon
   /// assets/images/send_icon.svg
@@ -169,6 +173,18 @@ class Assets {
   /// Assets for imagesShowPasswordIcon
   /// assets/images/show_password_icon.svg
   static const String imagesShowPasswordIcon = "assets/images/show_password_icon.svg";
+
+  /// Assets for imagesSp
+  /// assets/images/sp.svg
+  static const String imagesSp = "assets/images/sp.svg";
+
+  /// Assets for imagesSplashBottom
+  /// assets/images/splash_bottom.svg
+  static const String imagesSplashBottom = "assets/images/splash_bottom.svg";
+
+  /// Assets for imagesSplashTop
+  /// assets/images/splash_top.svg
+  static const String imagesSplashTop = "assets/images/splash_top.svg";
 
   /// Assets for imagesSubmitOffersImage
   /// assets/images/submit_offers_image.svg
