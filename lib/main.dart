@@ -1,4 +1,5 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -6,11 +7,15 @@ import 'package:travel_mate/core/helper_functions/on_generate_routes.dart';
 import 'package:travel_mate/core/services/shared_preferences_ton.dart';
 import 'package:travel_mate/core/utils/app_colors.dart';
 import 'package:travel_mate/features/splash/peresntation/view/splash_view.dart';
+import 'package:travel_mate/firebase_options.dart';
 import 'package:travel_mate/model/guide_box_data.dart';
 // import 'package:travel_mate/view/dashboard_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   await Prefs.init();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
