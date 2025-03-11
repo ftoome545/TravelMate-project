@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dartz/dartz.dart';
 import 'package:travel_mate/core/errors/exceptions.dart';
 import 'package:travel_mate/core/errors/failures.dart';
@@ -22,6 +24,7 @@ class AuthRepoImpl extends AuthRepo {
     } on CustomException catch (e) {
       return left(ServerFailure(e.message));
     } catch (e) {
+      log("Exception in AuthRepoImpl.createUserWitheEmailAndPassword: ${e.toString()}");
       return left(ServerFailure("An error occourred, try again later"));
     }
   }

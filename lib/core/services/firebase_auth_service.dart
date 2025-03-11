@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:travel_mate/core/errors/exceptions.dart';
 
@@ -12,15 +14,20 @@ class FirebaseAuthService {
       );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
+      log("Exception in FirebaseAuthService.createUserWitheEmailAndPassword: ${e.toString()} and code is: ${e.code.toString()}");
       if (e.code == 'weak-password') {
         throw CustomException(message: 'The password provided is too weak.');
       } else if (e.code == 'email-already-in-use') {
         throw CustomException(
             message: 'The account already exists for that email.');
+      } else if (e.code == 'network-request-failed') {
+        throw CustomException(
+            message: 'Make sure your are connected to the internet.');
       } else {
         throw CustomException(message: 'An error occourred, try again later');
       }
     } catch (e) {
+      log("Exception in FirebaseAuthService.createUserWitheEmailAndPassword: ${e.toString()}");
       throw CustomException(message: 'An error occourred, try again later');
     }
   }

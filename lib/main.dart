@@ -2,8 +2,11 @@ import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:travel_mate/core/helper_functions/on_generate_routes.dart';
+import 'package:travel_mate/core/services/custom_bloc_observer.dart';
+import 'package:travel_mate/core/services/get_it_service.dart';
 import 'package:travel_mate/core/services/shared_preferences_ton.dart';
 import 'package:travel_mate/core/utils/app_colors.dart';
 import 'package:travel_mate/features/splash/peresntation/view/splash_view.dart';
@@ -13,9 +16,11 @@ import 'package:travel_mate/model/guide_box_data.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  Bloc.observer = CustomBlocObserver();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  setupGitIt();
   await Prefs.init();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
