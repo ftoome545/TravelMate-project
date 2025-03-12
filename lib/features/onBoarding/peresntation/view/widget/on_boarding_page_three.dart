@@ -5,7 +5,7 @@ import 'package:travel_mate/utils/app_images.dart';
 import 'package:travel_mate/utils/app_styles.dart';
 
 import '../../../../../core/services/shared_preferences_ton.dart';
-import '../../../../auth/peresntation/view/login_view.dart';
+import '../../../../auth/peresntation/view/signin_view.dart';
 
 class OnBoardingPageThree extends StatelessWidget {
   const OnBoardingPageThree({super.key});
@@ -50,7 +50,7 @@ class OnBoardingPageThree extends StatelessWidget {
           GestureDetector(
             onTap: () {
               Prefs.setBool(kIsOnBoardingViewScreen, true);
-              Navigator.of(context).pushReplacementNamed(LoginView.routeName);
+              Navigator.of(context).pushReplacementNamed(SigninView.routeName);
             },
             child: Text(
               textAlign: TextAlign.center,

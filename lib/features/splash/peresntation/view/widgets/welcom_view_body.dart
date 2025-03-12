@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_mate/constants.dart';
-import 'package:travel_mate/features/auth/peresntation/view/login_view.dart';
+import 'package:travel_mate/features/auth/peresntation/view/signin_view.dart';
 import 'package:travel_mate/features/auth/peresntation/view/signup_view.dart';
 import 'package:travel_mate/utils/app_images.dart';
 import 'package:travel_mate/utils/app_styles.dart';
@@ -50,7 +50,7 @@ class WelcomeViewBody extends StatelessWidget {
                     child: CustomButton(
                   title: 'Sign in',
                   onPressed: () {
-                    Navigator.pushNamed(context, LoginView.routeName);
+                    Navigator.pushNamed(context, SigninView.routeName);
                   },
                 )),
                 const SizedBox(

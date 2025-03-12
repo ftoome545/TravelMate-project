@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_mate/features/auth/peresntation/view/login_view.dart';
+import 'package:travel_mate/features/auth/peresntation/view/signin_view.dart';
 import 'package:travel_mate/features/auth/peresntation/view/signup_view.dart';
 import 'package:travel_mate/features/home/peresntation/view/home_view.dart';
 import 'package:travel_mate/features/onBoarding/peresntation/view/on_boarding_view.dart';
@@ -17,8 +17,8 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
     case WelcomeView.routeName:
       return MaterialPageRoute(builder: (context) => const WelcomeView());
 
-    case LoginView.routeName:
-      return MaterialPageRoute(builder: (context) => const LoginView());
+    case SigninView.routeName:
+      return MaterialPageRoute(builder: (context) => const SigninView());
 
     case SignupView.routeName:
       return MaterialPageRoute(builder: (context) => const SignupView());

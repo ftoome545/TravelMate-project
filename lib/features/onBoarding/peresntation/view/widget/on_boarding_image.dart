@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_mate/constants.dart';
 import 'package:travel_mate/core/services/shared_preferences_ton.dart';
-import 'package:travel_mate/features/auth/peresntation/view/login_view.dart';
+import 'package:travel_mate/features/auth/peresntation/view/signin_view.dart';
 import '../../../../../utils/app_styles.dart';
 
 class OnBoardingImage extends StatelessWidget {
@@ -33,7 +33,7 @@ class OnBoardingImage extends StatelessWidget {
                 onTap: () {
                   Prefs.setBool(kIsOnBoardingViewScreen, true);
                   Navigator.of(context)
-                      .pushReplacementNamed(LoginView.routeName);
+                      .pushReplacementNamed(SigninView.routeName);
                 },
                 child: Padding(
                   padding: const EdgeInsets.only(right: 24, top: 24),

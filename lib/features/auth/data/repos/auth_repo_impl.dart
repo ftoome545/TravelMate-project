@@ -28,4 +28,44 @@ class AuthRepoImpl extends AuthRepo {
       return left(ServerFailure("An error occourred, try again later"));
     }
   }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      final user = await firebaseAuthService.signInWithEmailAndPassword(
+          email: email, password: password);
+
+      return right(UserModel.fromFirebaseUser(user));
+    } on CustomException catch (e) {
+      return left(ServerFailure(e.message));
+    } catch (e) {
+      log("Exception in AuthRepoImpl.signInWithEmailAndPassword: ${e.toString()}");
+      return left(ServerFailure("An error occourred, try again later"));
+    }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithGoogle() async {
+    try {
+      final user = await firebaseAuthService.signInWithGoogle();
+
+      return right(UserModel.fromFirebaseUser(user));
+    } catch (e) {
+      log("Exception in AuthRepoImpl.signInWithGoogle: ${e.toString()}");
+      return left(ServerFailure("An error occourred, try again later"));
+    }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithFacebook() async {
+    try {
+      final user = await firebaseAuthService.signInWithFacebook();
+
+      return right(UserModel.fromFirebaseUser(user));
+    } catch (e) {
+      log("Exception in AuthRepoImpl.signInWithFacebook: ${e.toString()}");
+      return left(ServerFailure("An error occourred, try again later"));
+    }
+  }
 }
